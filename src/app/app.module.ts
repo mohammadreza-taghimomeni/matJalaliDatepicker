@@ -4,6 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { A11yModule } from '@angular/cdk/a11y';
+import {MatCardModule} from '@angular/material/card';
+
+
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
@@ -15,7 +19,7 @@ import { DateAdapter, MAT_DATE_LOCALE, MAT_DATE_FORMATS } from '@angular/materia
 import { MatMomentDateModule, MAT_MOMENT_DATE_ADAPTER_OPTIONS } from '@angular/material-moment-adapter';
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { MomentDateModule } from '../datepicker/moment-date.module';
-import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatDatepickerModule,MatDateRangePicker } from '@angular/material/datepicker';
 
 
 @NgModule({
@@ -23,9 +27,11 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     AppComponent
   ],
   imports: [
+    A11yModule,    
     BrowserModule,
     BrowserAnimationsModule,
-
+    MatCardModule,
+    
     FormsModule,
     MatIconModule,
     MatInputModule,
@@ -33,7 +39,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     OverlayModule,
     MatMomentDateModule,
     MomentDateModule,
-    MatDatepickerModule
+    MatDatepickerModule,
   ],
   providers: [
     { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { hasBackdrop: false } },
