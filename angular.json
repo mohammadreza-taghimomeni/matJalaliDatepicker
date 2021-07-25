@@ -105,6 +105,37 @@
           }
         }
       }
+    },
+    "mat-jalaali-datepicker": {
+      "projectType": "library",
+      "root": "projects/mat-jalaali-datepicker",
+      "sourceRoot": "projects/mat-jalaali-datepicker/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/mat-jalaali-datepicker/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/mat-jalaali-datepicker/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/mat-jalaali-datepicker/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/mat-jalaali-datepicker/src/test.ts",
+            "tsConfig": "projects/mat-jalaali-datepicker/tsconfig.spec.json",
+            "karmaConfig": "projects/mat-jalaali-datepicker/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "jalaali-datepicker"
