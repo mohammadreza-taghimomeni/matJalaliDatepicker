@@ -1,11 +1,8 @@
-# JalaaliDatepicker
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.3.
-
-JalaaliDatepicker Folder Structure Conventions
+JalaaliDatepicker
 ============================
-
+> This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.3.
 > Folder structure options and naming conventions for software projects
+> We use of Angular Material Components to make this Jalaali datepicker 
 
 ### JalaaliDatepicker layout
 
