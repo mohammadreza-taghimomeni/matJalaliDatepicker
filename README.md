@@ -2,6 +2,21 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.3.
 
+JalaaliDatepicker Folder Structure Conventions
+============================
+
+> Folder structure options and naming conventions for software projects
+
+### JalaaliDatepicker layout
+
+    .
+    ├── src                     # Source files 
+    │   ├── app                 # There ia Example of use Jalaali Moment,Check App module
+    │   └── datepicker          # Copy this folder to your project
+    └── README.md
+
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
