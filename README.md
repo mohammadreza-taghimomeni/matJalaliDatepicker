@@ -2,7 +2,7 @@ Persian/Jalaali Datepicker By Angular Material
 ============================
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.3.
 
-We use Angular Material Components to make this Persian/Jalaali datepicker 
+We use Angular Material Components to make this Persian/Jalaali date picker 
 
 ### Important Persian/Jalaali Datepicker Files
 
@@ -16,9 +16,9 @@ We use Angular Material Components to make this Persian/Jalaali datepicker
     └── README.md
 
 
-## Getting Started with Persian/Jalaali datepicker
+## Getting Started with Persian/Jalaali date picker
 
-This guide explains how to set up your Angular project to begin using Persian/Jalaali datepicker. It includes information on prerequisites, installing Angular Material, and optionally displaying a sample material component in your application to verify your setup.
+This guide explains how to set up your Angular project to begin using the Persian/Jalaali date picker. It includes information on prerequisites, installing Angular Material, and optionally displaying a sample material component in your application to verify your setup.
 
 #### 1.Install Angular Material
 
@@ -34,7 +34,7 @@ Copy [datepicker](https://github.com/mrmtm95/matJalaliDatepicker/tree/main/src/d
 
 #### 3.Add Module to Your Project
 
-Use this line in your app.module.ts and you can use of this datepicker in your app.
+Use this line in your app.module.ts and you can use this date picker in your app.
 
 ```ts
 
@@ -104,5 +104,5 @@ export class AppModule { }
 
 ## Example
 
-You can use all example of Angular Material datepicker. So visit [datepicker example](https://material.angular.io/components/datepicker/examples)
+You can use all examples of Angular Material date pickers. So visit [datepicker example](https://material.angular.io/components/datepicker/examples)
 and enjoy of it
