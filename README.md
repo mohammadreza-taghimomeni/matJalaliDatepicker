@@ -23,7 +23,7 @@ This guide explains how to set up your Angular project to begin using Persian/Ja
 ### Install Angular Material
 Use the Angular CLI's installation schematic to set up your Angular Material project by running the following command:
 
-$ ng add @angular/material
+> `ng add @angular/material`
 
 ## Development server
 
