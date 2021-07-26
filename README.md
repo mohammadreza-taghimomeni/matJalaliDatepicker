@@ -104,5 +104,5 @@ export class AppModule { }
 
 ## Example
 
-You can use all example of Angular Material datepicker example. So visit [datepicker](https://material.angular.io/components/datepicker/examples)
+You can use all example of Angular Material datepicker. So visit [datepicker example](https://material.angular.io/components/datepicker/examples)
 and enjoy of it
