@@ -30,7 +30,7 @@ $ ng add @angular/material
 
 ### Copy Datepicker Folder
 
-[Copy](../src/datepicker) datepicker folder to your project.
+[Copy](./tree/main/src/datepicker) datepicker folder to your project.
 
 ## Development server
 
