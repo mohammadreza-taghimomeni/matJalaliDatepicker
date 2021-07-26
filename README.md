@@ -21,11 +21,16 @@ We use Angular Material Components to make this Persian/Jalaali datepicker
 This guide explains how to set up your Angular project to begin using Persian/Jalaali datepicker. It includes information on prerequisites, installing Angular Material, and optionally displaying a sample material component in your application to verify your setup.
 
 ### Install Angular Material
+
 Use the Angular CLI's installation schematic to set up your Angular Material project by running the following command:
 
 ```
 $ ng add @angular/material
 ```
+
+### Copy Datepicker Folder
+
+[Copy](../src/datepicker) datepicker folder to your project.
 
 ## Development server
 
