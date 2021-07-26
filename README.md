@@ -52,7 +52,7 @@ import { OverlayModule } from '@angular/cdk/overlay';
 import { JalaliMomentDateAdapter } from "../datepicker/jalali-moment-date-adapter";
 import { JALALI_MOMENT_FORMATS, MOMENT_FORMATS } from "../datepicker/jalali_moment_formats";
 import { MomentDateModule } from '../datepicker/moment-date.module';
-;
+
 
 @NgModule({
   declarations: [
@@ -102,6 +102,7 @@ import { MomentDateModule } from '../datepicker/moment-date.module';
 export class AppModule { }
 ```
 
-## Development server
+## Example
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+You can use all example of Angular Material datepicker example. So visit [datepicker](https://material.angular.io/components/datepicker/examples)
+and enjoy of it
