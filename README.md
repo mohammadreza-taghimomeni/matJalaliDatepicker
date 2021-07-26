@@ -20,7 +20,7 @@ We use Angular Material Components to make this Persian/Jalaali datepicker
 
 This guide explains how to set up your Angular project to begin using Persian/Jalaali datepicker. It includes information on prerequisites, installing Angular Material, and optionally displaying a sample material component in your application to verify your setup.
 
-### Install Angular Material
+#### 1.Install Angular Material
 
 Use the Angular CLI's installation schematic to set up your Angular Material project by running the following command:
 
@@ -28,30 +28,80 @@ Use the Angular CLI's installation schematic to set up your Angular Material pro
 $ ng add @angular/material
 ```
 
-### Copy Datepicker Folder
+#### 2.Copy Datepicker Folder
 
-[Copy](https://github.com/mrmtm95/matJalaliDatepicker/tree/main/src/datepicker) datepicker folder to your project.
+Copy [datepicker](https://github.com/mrmtm95/matJalaliDatepicker/tree/main/src/datepicker) folder to your project.
+
+#### 3.Add Module to Your Project
+
+Use this line in your app.module.ts and you can use of this datepicker in your app.
+
+```ts
+
+//============ [ Angular Material Module ] ============ 
+import { MatDatepickerModule,MatDateRangePicker } from '@angular/material/datepicker';
+import { DateAdapter, MAT_DATE_LOCALE, MAT_DATE_FORMATS } from '@angular/material/core';
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
+import { MatMomentDateModule, MAT_MOMENT_DATE_ADAPTER_OPTIONS } from '@angular/material-moment-adapter'
+import { FormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { OverlayModule } from '@angular/cdk/overlay';
+
+//============ [ Custom Module ] ============ 
+import { JalaliMomentDateAdapter } from "../datepicker/jalali-moment-date-adapter";
+import { JALALI_MOMENT_FORMATS, MOMENT_FORMATS } from "../datepicker/jalali_moment_formats";
+import { MomentDateModule } from '../datepicker/moment-date.module';
+;
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    *,
+    *,
+    *,
+    //============ [ Add Imports to Your Module ] ============ 
+    FormsModule,
+    MatIconModule,
+    MatInputModule,
+    OverlayModule,
+    MatMomentDateModule,
+    MomentDateModule,
+    MatDatepickerModule,
+    *,
+    *,
+    *
+  ],
+  providers: [  
+    //============ [ Add Providers to Your Module ] ============ 
+    { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { hasBackdrop: false } },
+    {
+      provide: DateAdapter,
+      useClass: JalaliMomentDateAdapter,
+      deps: [MAT_DATE_LOCALE]
+    },
+    { provide: MAT_DATE_FORMATS, useValue: JALALI_MOMENT_FORMATS },
+    { provide: MAT_DATE_LOCALE, useValue: "fa" }, // en-GB  fr
+    {
+      provide: MAT_DATE_FORMATS,
+      useFactory: (locale: string) => {
+        if (locale === "fa") {
+          return JALALI_MOMENT_FORMATS;
+        } else {
+          return MOMENT_FORMATS;
+        }
+      },
+      deps: [MAT_DATE_LOCALE]
+    },
+    { provide: MAT_MOMENT_DATE_ADAPTER_OPTIONS, useValue: { useUtc: true } }
+  ],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
